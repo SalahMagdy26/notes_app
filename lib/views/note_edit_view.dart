@@ -13,15 +13,17 @@ class NoteEditView extends StatelessWidget {
         title:  const CustomAppBar(title: 'Edit note',icon: Icons.check,),
         actions: const [ SizedBox(width: 16,),],
       ),
-      body: const Padding(
-        padding: EdgeInsets.all(24.0),
-        child: Column(
-          children: [
-            SizedBox(height: 30,),
-            CustomTextField(hint: 'Title'),
-            SizedBox(height: 15,),
-            CustomTextField(hint: 'Content', lines: 6,),
-          ],
+      body: const SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.all(24.0),
+          child: Column(
+            children: [
+              SizedBox(height: 30,),
+              CustomTextField(hint: 'Title', borderSide: BorderSide(color: Colors.white,),),
+              SizedBox(height: 15,),
+              CustomTextField(hint: 'Content', lines: 20,borderSide: BorderSide.none,),
+            ],
+          ),
         ),
       ),
     );

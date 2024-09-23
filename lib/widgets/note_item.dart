@@ -19,16 +19,20 @@ class NoteItem extends StatelessWidget {
               Navigator.of(context).push(MaterialPageRoute(builder:(context)=> const NoteEditView()));
             },
             title: const Text(
-              'Flutter Note',
-              style: TextStyle(fontSize: 28, color: Colors.black),
+              'Note\'s title',
+              style: TextStyle(fontSize: 28, color: Colors.black,
+              fontFamily: 'suse',
+                fontWeight: FontWeight.w600
+              ),
             ),
             subtitle: Padding(
               padding: const EdgeInsets.symmetric(vertical: 13.0),
               child: Text(
-                'Write your notes here to keep it in yor head',
+                'Write your notes here to keep it in your head',
                 style: TextStyle(
                   color: Colors.black.withOpacity(0.5),
                   fontSize: 16,
+                  fontFamily: 'suse'
                 ),
               ),
             ),
@@ -36,14 +40,17 @@ class NoteItem extends StatelessWidget {
                 onPressed: () {},
                 icon: const Icon(
                   Icons.delete_rounded,
-                  color: Colors.black,
+                  color: Color(0xffd00000),
+                  size: 30,
                 )),
           ),
           const Padding(
             padding: EdgeInsets.only(right: 20.0),
             child: Text(
               'July,23,2024 ',
-              style: TextStyle(color: Colors.black),
+              style: TextStyle(color: Colors.black,
+              fontFamily: 'suse'
+              ),
             ),
           ),
         ],

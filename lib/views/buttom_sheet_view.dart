@@ -18,6 +18,7 @@ class ButtonSheet extends StatelessWidget {
           children: [
             CustomTextField(
               hint: 'Title',
+              borderSide: BorderSide(color: Colors.white),
             ),
             SizedBox(
               height: 10,
@@ -25,6 +26,9 @@ class ButtonSheet extends StatelessWidget {
             CustomTextField(
               hint: 'Note content',
               lines: 6,
+              borderSide: BorderSide(
+                color: Colors.white,
+              ),
             ),
             SizedBox(
               height: 30,
